@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: insight-engine-backend
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5432/insightengine
+    username: insight
+    password: insight_pass
+    driver-class-name: org.postgresql.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+server:
+  port: 8080
+
+# Custom properties
+ai:
+  service:
+    url: http://localhost:8000
+    # Must exceed the AI service's own upstream timeout (Python waits up to
+    # 120s for an LLM response). If this fires first, the caller gets a
+    # message-less Netty ReadTimeoutException instead of the real error.
+    timeout-seconds: 180
+
+app:
+  upload:
+    dir: uploads
+
+logging:
+  level:
+    com.insightengine: DEBUG
+    org.springframework.web: INFO

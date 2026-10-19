@@ -1,0 +1,8 @@
+.env
+.vscode
+/frontend/node_modules
+/docs
+/backend/uploads
+/backend/build
+/ai-service/.env
+/ai-service/venv

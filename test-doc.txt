@@ -1,0 +1,1 @@
+The InsightEngine platform supports PDF document ingestion. Documents are parsed, chunked into overlapping segments, embedded using OpenAI's text-embedding-3-small model, and stored in Qdrant for semantic retrieval. Each chunk retains metadata including source page number and tenant identifier for access control.

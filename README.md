@@ -37,11 +37,3 @@ cd backend
 curl http://localhost:8080/api/health
 curl http://localhost:8000/health
 ```
-
-## Documentation
-
-- [ADR-001: Polyglot Architecture](docs/001-polyglot-architecture.md)
-
-## Status
-
-🚧 Phase 1: Core RAG Pipeline (In Progress)
